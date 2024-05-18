@@ -1,5 +1,15 @@
 # SPSR
 
+```bash
+# put the low resolution images in data/dataset as "LR" labelled
+# put the high resolution images in data/dataset as "HR" labelled. For inferene, the low resolutions images can be put in "HR" folder
+
+
+chmod +x runner.sh
+./runner.sh
+
+# the results are stored in "results folder" in base directory
+```
 
 ## Low Resolution Dataset and COLMAP Dense Reconstruction
 
