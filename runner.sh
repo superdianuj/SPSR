@@ -1,10 +1,12 @@
 #!/bin/bash
-mkdir code/dataset
-python code/colmap_runner.py --path code/dataset/LR LR_colmap
-python code/visualizer.py --dir code/dataset/LR
+
+path="$1"
+rm -rf data/dataset/*
+cp -r "$path" data/dataset
+mv data/dataset/"$path" data/dataset/LR
+cp -r "$path" data/dataset
+mv data/dataset/"$path" data/dataset/HR
 cd code
 python test.py -opt options/test/test_spsr.json
 cd ..
 python process_imgs.py
-python code/colmap_runner.py --path processed_results SR_pred_colmap
-python code/visualizer.py --dir processed_results
