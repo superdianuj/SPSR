@@ -1,13 +1,15 @@
 # SPSR
 
 ```bash
-# put the low resolution images in data/dataset as "LR" labelled
-# put the high resolution images in data/dataset as "HR" labelled. For inferene, the low resolutions images can be put in "HR" folder
+git clone --recursive https://github.com/superdianuj/SPSR.git
+cd SPSR
+
+# drop a folder containing images
 # place the pretrained models in "experiments" folder, as mentioned in https://github.com/Maclory/SPSR
 
 
 chmod +x runner.sh
-./runner.sh
+./runner.sh <name of folder containing images>
 
 # the results are stored in "results folder" in base directory
 ```
